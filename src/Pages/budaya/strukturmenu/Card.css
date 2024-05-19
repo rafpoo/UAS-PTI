@@ -1,0 +1,38 @@
+/* Card.css */
+.header {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  border: 0px solid #ccc; /* Add border */
+  border-radius: 1%; /* Rounded corners */
+  overflow: hidden; /* Ensures the image doesn't exceed the border radius */
+  box-shadow: 10px 10px 8px rgba(0, 0, 0.5, 0.5); /* Adds shadow for depth */
+}
+
+.card-menu-image {
+  width: 100%; /* Ensures the image covers the card width */
+  height: 10rem; /* Maintains aspect ratio */
+  display: block; /* Removes bottom space under the image */
+}
+
+.nama {
+  position: absolute;
+  bottom: 10px; /* Position from the bottom */
+  left: 10px; /* Position from the left */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Padding inside the background */
+  border-radius: 5px; /* Rounded corners for the text background */
+  font-size: 1.2em; /* Larger text size */  
+}
+
+/* Add overlay effect */
+.header:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure overlay is above image */
+  pointer-events: none; /* Allow interaction with underlying elements */
+}
